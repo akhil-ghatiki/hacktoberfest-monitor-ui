@@ -27,7 +27,7 @@ function App() {
               onSubmit={async (data) => {
                   console.log(data.formData);
                   try {
-                      await axios.post('https://34.72.73.46:3000/api/pr', data.formData);
+                      await axios.post('http://34.72.73.46:3000/api/pr', data.formData);
                       alert.show("Thanks for your contribution");
                   } catch (err) {
                       const {message} = err.response.data || {message: ''};
