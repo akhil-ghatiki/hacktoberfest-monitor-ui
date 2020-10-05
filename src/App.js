@@ -8,13 +8,16 @@ const languages = [
     "GoLang", "Java", "Python", "Kotlin", "Swift", "Objective C", "C#", "JavaScript", "Ruby", "Shell Script", "TypeScript", "CSS", "C++", "Rust", "Other"
 ].sort();
 
+const isFirstPrValues = ["Yes","No"].sort();
+
 const schema = {
     title: "Hacktoberfest - ThoughtWorks",
     type: "object",
-    required: ["pr_link", "language"],
+    required: ["pr_link", "language","isFirstPR"],
     properties: {
         pr_link: {type: "string", title: "Pull Request Link"},
-        language: {type: "string", title: "Language", "enum": languages}
+        language: {type: "string", title: "Language", "enum": languages},
+        isFirstPR: {type: "string", title: " Is this your first PR", "enum": isFirstPrValues, default: "No"}
     }
 };
 
