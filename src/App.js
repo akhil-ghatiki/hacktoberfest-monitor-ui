@@ -11,7 +11,7 @@ const languages = [
 const isFirstPrValues = ["Yes","No"].sort();
 
 const schema = {
-    title: "Hacktoberfest - ThoughtWorks - Hyderabad",
+    title: "Hacktoberfest - ThoughtWorks - Hyderabad - 2020",
     type: "object",
     required: ["pr_link", "language","isFirstPR"],
     properties: {
@@ -27,6 +27,7 @@ const log = (type) => console.log.bind(console, type);
 function App() {
     const alert = useAlert();
     return (
+        <div>
         <Form schema={schema}
               onSubmit={async (data) => {
                   console.log(data.formData);
@@ -41,6 +42,13 @@ function App() {
                   }
               }}
               onError={log("errors")}/>
+              <p>
+                <br></br>
+                Note: <br></br>
+                Thank you so much for your time. A lot of volunteering work went into this.
+                We hope you will understand not to raise spam PRs / contributions through this platform as that will cost a lot of time to the maintainers and to you too ! 
+              </p>
+              </div>
     );
 }
 
