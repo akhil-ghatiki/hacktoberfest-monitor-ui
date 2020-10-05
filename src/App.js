@@ -11,10 +11,11 @@ const languages = [
 const isFirstPrValues = ["Yes","No"].sort();
 
 const schema = {
-    title: "Hacktoberfest - ThoughtWorks",
+    title: "Hacktoberfest - ThoughtWorks - Hyderabad",
     type: "object",
     required: ["pr_link", "language","isFirstPR"],
     properties: {
+        name: {type:"string", title:"Name(Optional)"},
         pr_link: {type: "string", title: "Pull Request Link"},
         language: {type: "string", title: "Language", "enum": languages},
         isFirstPR: {type: "string", title: " Is this your first PR", "enum": isFirstPrValues, default: "No"}
