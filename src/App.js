@@ -11,7 +11,7 @@ const languages = [
 const isFirstPrValues = ["Yes","No"].sort();
 
 const schema = {
-    title: "Hacktoberfest - ThoughtWorks - Hyderabad - 2020",
+    title: "Hacktoberfest 2022 : Thoughtworks Hyderabad : Hybrid event",
     type: "object",
     required: ["pr_link", "language","isFirstPR"],
     properties: {
